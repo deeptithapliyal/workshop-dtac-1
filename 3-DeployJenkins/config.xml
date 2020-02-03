@@ -86,12 +86,12 @@
                             sh &apos;ls $WORKSPACE&apos;
                             sh &apos;kubectl apply -f $WORKSPACE/manifests/sockshop-app/dev/carts2.yml&apos;
                             echo &quot;Waiting for carts service to start...&quot;
-                            sleep 350
+                            sleep 120
                         } else {
                             sh &apos;ls $WORKSPACE&apos;
                             sh &apos;kubectl apply -f $WORKSPACE/manifests/sockshop-app/canary/carts2-canary.yml&apos;
                             echo &quot;Waiting for carts service to start...&quot;
-                            sleep 350
+                            sleep 120
                         }
                     }
                 }
@@ -142,12 +142,12 @@
                             sh &apos;ls $WORKSPACE&apos;
                             sh &apos;kubectl apply -f $WORKSPACE/manifests/sockshop-app/production/carts2.yml&apos;
                             echo &quot;Waiting for carts service to start...&quot;
-                            sleep 350
+                            sleep 120
                         } else {
                             sh &apos;ls $WORKSPACE&apos;
                             sh &apos;kubectl apply -f $WORKSPACE/manifests/sockshop-app/canary/carts2-badbuild.yml&apos;
                             echo &quot;Waiting for carts service to start...&quot;
-                            sleep 350
+                            sleep 120
                         }
                     }
                 }
