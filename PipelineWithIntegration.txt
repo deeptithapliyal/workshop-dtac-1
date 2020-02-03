@@ -58,12 +58,12 @@ pipeline{
                                 sh 'ls $WORKSPACE'
                                 sh 'kubectl apply -f $WORKSPACE/manifests/sockshop-app/dev/carts2.yml'
                                 echo "Waiting for carts service to start..."
-                                sleep 350
+                                sleep 120
                             } else {
                                 sh 'ls $WORKSPACE'
                                 sh 'kubectl apply -f $WORKSPACE/manifests/sockshop-app/canary/carts2-canary.yml'
                                 echo "Waiting for carts service to start..."
-                                sleep 350
+                                sleep 120
                             }
                         }
                     }
@@ -118,12 +118,12 @@ pipeline{
                                 sh 'ls $WORKSPACE'
                                 sh 'kubectl apply -f $WORKSPACE/manifests/sockshop-app/production/carts2.yml'
                                 echo "Waiting for carts service to start..."
-                                sleep 350
+                                sleep 120
                             } else {
                                 sh 'ls $WORKSPACE'
                                 sh 'kubectl apply -f $WORKSPACE/manifests/sockshop-app/canary/carts2-badbuild.yml'
                                 echo "Waiting for carts service to start..."
-                                sleep 350
+                                sleep 120
                             }
                         }
                                         }
