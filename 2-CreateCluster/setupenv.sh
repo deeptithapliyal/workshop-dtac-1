@@ -92,6 +92,7 @@ sleep 120
 echo "Start Production Load"
 nohup ../utils/cartsLoadTest.sh &
 
+echo "Start DEV Load"
+nohup ../utils/cartsLoadTest-dev.sh &
+
 echo "Deployment Complete"
-
-
