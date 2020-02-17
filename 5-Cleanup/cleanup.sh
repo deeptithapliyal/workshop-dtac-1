@@ -5,6 +5,10 @@ export CARTS_LOADTEST_PID=$(ps -o pid= -C cartsLoadTest.sh)
 kill -9 $CARTS_LOADTEST_PID
 echo "Carts load test PID $CARTS_LOADTEST_PID was stopped"
 
+export CARTS_LOADTEST_PID=$(ps -o pid= -C cartsLoadTest-dev.sh)
+kill -9 $CARTS_LOADTEST_PID
+echo "Carts load test DEV PID $CARTS_LOADTEST_PID was stopped"
+
 #delete pod security policies and CRDs
 kubectl delete podsecuritypolicy dynatrace-oneagent
 kubectl delete podsecuritypolicy dynatrace-oneagent-operator
