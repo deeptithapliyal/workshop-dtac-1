@@ -93,6 +93,7 @@ echo "Start Production Load"
 nohup ../utils/cartsLoadTest.sh &
 
 echo "Start DEV Load"
+chmod +x ../utils/cartsLoadTest-dev.sh
 nohup ../utils/cartsLoadTest-dev.sh &
 
 echo "Deployment Complete"
